@@ -27,16 +27,16 @@ const StyledCircle = styled.circle`
 
 const GradientCircleProgressbar = ({
   percentage,
-  width,
-  strokeWidth,
-  fontSize,
-  fontColor,
-  fontFamily,
-  primaryColor,
-  secondaryColor,
-  fill,
+  width = 200,
+  strokeWidth = 5,
+  fontSize = 'inherit',
+  fontColor = 'inherit',
+  fontFamily = 'inherit',
+  primaryColor = ['#00BBFF', '#92d7f1'],
+  secondaryColor = 'transparent',
+  fill = 'transparent',
   hidePercentageText,
-  strokeLinecap,
+  strokeLinecap = 'round',
 }) => {
   const PI = 3.14
   const R = (width / 2) - (strokeWidth * 2)
@@ -123,18 +123,6 @@ GradientCircleProgressbar.propTypes = {
   secondaryColor: PropTypes.string,
   fill: PropTypes.string,
   hidePercentageText: PropTypes.bool,
-}
-
-GradientCircleProgressbar.defaultProps = {
-  width: 200,
-  strokeWidth: 5,
-  strokeLinecap: 'round',
-  fontSize: 'inherit',
-  fontColor: 'inherit',
-  fontFamily: 'inherit',
-  primaryColor: ['#00BBFF', '#92d7f1'],
-  secondaryColor: 'transparent',
-  fill: 'transparent',
 }
 
 export default GradientCircleProgressbar
