@@ -1,27 +1,28 @@
 {
   "name": "react-gradient-progress",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Simple and light gradient-enabled circular progressbar for reactjs/nextjs",
   "author": "Prasanna Mestha",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "parcel ./example/index.html",
-    "build": "rm -rf build && parcel build src/index.js -d build --no-source-maps --no-minify"
+    "build": "rm -rf build && parcel build src/index.js --dist-dir build --no-source-maps --no-optimize"
   },
   "repository": "https://github.com/prasannamestha/react-gradient-progress",
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
   },
   "keywords": [
     "progress",
